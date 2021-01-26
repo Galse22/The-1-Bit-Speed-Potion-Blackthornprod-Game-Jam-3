@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
     public float baseJumpForce;
     public float maxJumpForce;
     public float jumpForceMultiplier;
-    public float gravityEndOfJump;
     float currentJumpForce;
     float jumpForceJump;
 
@@ -39,6 +38,12 @@ public class PlayerController : MonoBehaviour
 
     float moveInput;
 
+    [Header("Gravity Variables")]
+    public float gravityEndOfJump;
+    public float gravitySKey;
+
+    public bool canMove = false;
+
 
     void Start()
     {
@@ -66,8 +71,15 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ChangeValues();
-        JumpStuff();
+        if(canMove == true)
+        {
+            ChangeValues();
+            JumpStuff();
+            if(Input.GetKey(KeyCode.S))
+            {
+                rb2d.gravityScale = gravitySKey;
+            }
+        }
     }
 
     void ChangeValues()
@@ -111,7 +123,10 @@ public class PlayerController : MonoBehaviour
         {
             currentCoyoteJump = baseCoyoteJumpFloat;
             currentJumpTimeCounter = currentValueOfJumpTimeCounter;
-            rb2d.gravityScale = 1f;
+            if(!Input.GetKey(KeyCode.S))
+            {
+                rb2d.gravityScale = 1f;
+            }
             jumped = false;
         }
         currentCoyoteJump -= Time.deltaTime;
