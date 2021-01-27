@@ -25,4 +25,19 @@ public class CollisionManagerPlayer : MonoBehaviour
             }
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(other.gameObject.tag == "Spikes" || other.gameObject.tag == "Arrow")
+        {
+            if(changedStuff == false && timeManager.isAlive == true)
+            {
+                playerController.canMove = false;
+                deathGO.SetActive(true);
+                timeManager.isAlive = false;
+                Instantiate(soundDeath, this.gameObject.transform.position, Quaternion.identity);
+                Time.timeScale = 0f;
+                changedStuff = true;
+            }
+        }
+    }
 }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Spikes
   - Arrow
+  - ArrowTrap
   layers:
   - Default
   - TransparentFX

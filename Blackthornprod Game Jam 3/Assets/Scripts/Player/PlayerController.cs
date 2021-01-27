@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb2d;
+    public Animator anim;
 
     [Header("Jump Variables")]
     public float baseJumpForce;
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour
     float currentValueOfJumpTimeCounter;
     float currentJumpTimeCounter;
     bool isJumping;
+    bool setAnim;
 
     [Header("Speed Variables")]
     public float baseSpeed;
@@ -61,11 +63,17 @@ public class PlayerController : MonoBehaviour
             rb2d.velocity = new Vector2(moveInput * currentSpeed, rb2d.velocity.y);
             if(moveInput == 1)
             {
+                anim.SetBool("isWalking", true);
                 transform.eulerAngles = new Vector3(0, 0, 0);
             }
             else if(moveInput == -1)
             {
+                anim.SetBool("isWalking", true);
                 transform.eulerAngles = new Vector3(0, 180, 0);
+            }
+            else
+            {
+                anim.SetBool("isWalking", false);
             }
         }
     }
@@ -129,11 +137,16 @@ public class PlayerController : MonoBehaviour
         {
             currentCoyoteJump = baseCoyoteJumpFloat;
             currentJumpTimeCounter = currentValueOfJumpTimeCounter;
+            anim.SetBool("isGrounded", true);
             if(!Input.GetKey(KeyCode.S))
             {
                 rb2d.gravityScale = 1f;
             }
             jumped = false;
+        }
+        else
+        {
+            anim.SetBool("isGrounded", false);
         }
         currentCoyoteJump -= Time.deltaTime;
 
@@ -143,6 +156,8 @@ public class PlayerController : MonoBehaviour
         {
             isJumping = true;
             jumped = true;
+            setAnim = false;
+            anim.SetTrigger("TakeOff");
             rb2d.velocity = Vector2.up * currentJumpForce;
         }
 
@@ -157,6 +172,11 @@ public class PlayerController : MonoBehaviour
                 {
                     rb2d.gravityScale = gravityEndOfJump;
                     isJumping = false;
+                    if(setAnim == false)
+                    {
+                        setAnim = true;
+                        anim.SetTrigger("LookDown");
+                    }
                 }
             }
             else
@@ -169,6 +189,11 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyUp(KeyCode.Space))
         {
             isJumping = false;
+            if(setAnim == false)
+            {
+                setAnim = true;
+                anim.SetTrigger("LookDown");
+            }
             rb2d.gravityScale = gravityEndOfJump;
         }
     }
