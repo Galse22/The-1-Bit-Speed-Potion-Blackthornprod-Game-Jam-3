@@ -56,15 +56,17 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         moveInput = Input.GetAxisRaw("Horizontal");
-        rb2d.velocity = new Vector2(moveInput * currentSpeed, rb2d.velocity.y);
-
-        if(moveInput == 1)
+        if(canMove)
         {
-            transform.eulerAngles = new Vector3(0, 0, 0);
-        }
-        else if(moveInput == -1)
-        {
-            transform.eulerAngles = new Vector3(0, 180, 0);
+            rb2d.velocity = new Vector2(moveInput * currentSpeed, rb2d.velocity.y);
+            if(moveInput == 1)
+            {
+                transform.eulerAngles = new Vector3(0, 0, 0);
+            }
+            else if(moveInput == -1)
+            {
+                transform.eulerAngles = new Vector3(0, 180, 0);
+            }
         }
     }
 
@@ -79,6 +81,10 @@ public class PlayerController : MonoBehaviour
             {
                 rb2d.gravityScale = gravitySKey;
             }
+        }
+        else
+        {
+          rb2d.velocity = new Vector2(0, 0);  
         }
     }
 
