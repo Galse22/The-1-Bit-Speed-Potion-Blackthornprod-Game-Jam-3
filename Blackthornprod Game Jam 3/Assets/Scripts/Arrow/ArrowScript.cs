@@ -27,6 +27,10 @@ public class ArrowScript : MonoBehaviour
         {
             Physics2D.IgnoreCollision(other.GetComponent<Collider2D>(), GetComponent<Collider2D>());
         }
+        else if(other.gameObject.tag == "Player")
+        {
+            hasHitSomething = true;
+        }
         else
         {
             if(hasHitSomething == false)

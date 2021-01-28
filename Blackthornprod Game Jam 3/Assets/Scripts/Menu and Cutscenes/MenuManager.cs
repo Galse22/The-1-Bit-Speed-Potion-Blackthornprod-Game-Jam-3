@@ -15,7 +15,12 @@ public class MenuManager : MonoBehaviour
         Invoke("ActualLoadScene", loadTime);
     }
 
-    public void YouTubeLink()
+    void ActualLoadScene()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void YTLink()
     {
         Application.OpenURL("https://www.youtube.com/channel/UCBgA6tSAxLkdLJVAILqZLuQ");
     }
@@ -23,10 +28,5 @@ public class MenuManager : MonoBehaviour
     public void TwitterLink()
     {
         Application.OpenURL("https://twitter.com/galse22");
-    }
-
-    void ActualLoadScene()
-    {
-        SceneManager.LoadScene(1);
     }
 }
