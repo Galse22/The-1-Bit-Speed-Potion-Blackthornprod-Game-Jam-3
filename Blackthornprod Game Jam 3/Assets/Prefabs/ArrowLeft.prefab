@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4115422900696160771}
   - component: {fileID: 1922154291341569874}
   - component: {fileID: 4731342736245619361}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ArrowLeft
   m_TagString: Arrow
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goingLeft: 1
-  speed: 5.5
+  speed: 6
   hasHitSomething: 0
 --- !u!212 &4115422900696160771
 SpriteRenderer:

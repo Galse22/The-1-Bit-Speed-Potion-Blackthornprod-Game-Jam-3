@@ -32,6 +32,12 @@ public class ArrowScript : MonoBehaviour
             if(hasHitSomething == false)
             {
                 hasHitSomething = true;
+                Transform transform = GetComponent<Transform>();
+                BoxCollider2D bc2d = GetComponent<BoxCollider2D>();
+                Rigidbody2D rb2d = GetComponent<Rigidbody2D>();
+                transform.gameObject.tag = "Untagged";
+                bc2d.isTrigger = false;
+                rb2d.constraints = RigidbodyConstraints2D.FreezeAll;
             }
         }
     }
