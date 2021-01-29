@@ -20,6 +20,16 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void BugsScene()
+    {
+        SceneManager.LoadScene(7);
+    }
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     public void YTLink()
     {
         Application.OpenURL("https://www.youtube.com/channel/UCBgA6tSAxLkdLJVAILqZLuQ");

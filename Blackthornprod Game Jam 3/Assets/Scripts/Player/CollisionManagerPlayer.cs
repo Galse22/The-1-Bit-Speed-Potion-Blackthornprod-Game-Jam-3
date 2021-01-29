@@ -60,6 +60,7 @@ public class CollisionManagerPlayer : MonoBehaviour
         else if(other.gameObject.tag == "Potion" || other.gameObject.tag == "Wizard")
         {
             shouldDie = false;
+            timeManager.isAlive = false;
             Invoke("NextScene", timeNextScene);
             sceneTransGO.SetActive(true);
             panelAnim.SetTrigger("GoingToNewScene");

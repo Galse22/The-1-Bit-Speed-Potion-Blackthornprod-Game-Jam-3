@@ -591,7 +591,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.022293, y: 1.5000002, z: -10}
+  m_LocalPosition: {x: 5.442857, y: 1.5000002, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -127285,7 +127285,7 @@ MonoBehaviour:
   startGameSceneScript: {fileID: 1315308325}
   restartSceneScript: {fileID: 1315308324}
   slider: {fileID: 1916592863}
-  timeToCompleteLvl: 14
+  timeToCompleteLvl: 15
   timeIsUpGO: {fileID: 14854229}
   playerController: {fileID: 1476780720}
   isAlive: 1
@@ -127407,7 +127407,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1472712892}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.022293, y: 1.5000002, z: -10}
+  m_LocalPosition: {x: 5.442857, y: 1.5000002, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 180866890}
