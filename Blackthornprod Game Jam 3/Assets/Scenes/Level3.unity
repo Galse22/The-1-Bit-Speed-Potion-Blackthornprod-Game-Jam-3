@@ -438,7 +438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2982147135278566228, guid: 94d7390b40b7e9c4ca5f31df43e8d1e2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.36
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 2982147135278566228, guid: 94d7390b40b7e9c4ca5f31df43e8d1e2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -508,7 +508,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2982147135278566228, guid: 94d7390b40b7e9c4ca5f31df43e8d1e2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.36
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 2982147135278566228, guid: 94d7390b40b7e9c4ca5f31df43e8d1e2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1206,7 +1206,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2982147135278566228, guid: 94d7390b40b7e9c4ca5f31df43e8d1e2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.36
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 2982147135278566228, guid: 94d7390b40b7e9c4ca5f31df43e8d1e2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -25600,7 +25600,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2982147135278566228, guid: 94d7390b40b7e9c4ca5f31df43e8d1e2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.36
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 2982147135278566228, guid: 94d7390b40b7e9c4ca5f31df43e8d1e2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -25706,6 +25706,7 @@ MonoBehaviour:
   timeAfterRKey: 1.1
   sceneTransGO: {fileID: 1944806568}
   panelAnim: {fileID: 1104152026}
+  windowsVer: 0
 --- !u!114 &1315308325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25737,7 +25738,7 @@ MonoBehaviour:
   startGameSceneScript: {fileID: 1315308325}
   restartSceneScript: {fileID: 1315308324}
   slider: {fileID: 1916592863}
-  timeToCompleteLvl: 17.5
+  timeToCompleteLvl: 17
   timeIsUpGO: {fileID: 14854229}
   playerController: {fileID: 1476780720}
   isAlive: 1
@@ -26164,7 +26165,7 @@ MonoBehaviour:
   jumpTimeCounterMultiplier: 0.03
   baseSpeed: 8
   maxSpeed: 16
-  speedMultiplier: 0.5
+  speedMultiplier: 1.2
   gravityEndOfJump: 1.4
   gravitySKey: 4.2
   canMove: 0
@@ -27014,7 +27015,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2982147135278566228, guid: 94d7390b40b7e9c4ca5f31df43e8d1e2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.36
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 2982147135278566228, guid: 94d7390b40b7e9c4ca5f31df43e8d1e2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -27270,7 +27271,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2982147135278566228, guid: 94d7390b40b7e9c4ca5f31df43e8d1e2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.36
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 2982147135278566228, guid: 94d7390b40b7e9c4ca5f31df43e8d1e2, type: 3}
       propertyPath: m_LocalPosition.z

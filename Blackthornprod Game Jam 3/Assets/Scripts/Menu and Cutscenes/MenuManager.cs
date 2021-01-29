@@ -5,14 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    public GameObject sceneTransGO;
-    public Animator panelAnim;
-    public float loadTime;
     public void LoadGame()
     {
-        sceneTransGO.SetActive(true);
-        panelAnim.SetTrigger("GoingToNewScene");
-        Invoke("ActualLoadScene", loadTime);
+        ActualLoadScene();
     }
 
     void ActualLoadScene()
@@ -28,6 +23,11 @@ public class MenuManager : MonoBehaviour
     public void BackToMenu()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
     public void YTLink()

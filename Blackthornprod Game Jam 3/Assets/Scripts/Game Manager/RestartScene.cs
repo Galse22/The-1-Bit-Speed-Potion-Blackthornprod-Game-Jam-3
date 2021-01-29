@@ -9,6 +9,7 @@ public class RestartScene : MonoBehaviour
     public float timeAfterRKey;
     public GameObject sceneTransGO;
     public Animator panelAnim;
+    public bool windowsVer;
     void Update()
     {
         if(timeBtwRestartScene > 0)
@@ -18,7 +19,12 @@ public class RestartScene : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.R) && timeBtwRestartScene <= 0){
             StartCoroutine("RestartSceneCoroutine");
-        }  
+        }
+
+        if(windowsVer == true && Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     public void PublicFuncRestart()
