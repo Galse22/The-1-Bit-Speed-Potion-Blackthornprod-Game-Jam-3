@@ -12663,7 +12663,7 @@ MonoBehaviour:
   timeAfterRKey: 1.1
   sceneTransGO: {fileID: 1944806568}
   panelAnim: {fileID: 1104152026}
-  windowsVer: 0
+  windowsVer: 1
 --- !u!114 &1315308325
 MonoBehaviour:
   m_ObjectHideFlags: 0
